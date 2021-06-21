@@ -17,10 +17,10 @@ type server struct {
 	pb.UnimplementedGetPersonServer
 }
 
-// GetPerson implements person.GetPerson
-func (s *server) GetPerson(ctx context.Context, in *pb.Person) (*pb.Person, error) {
-	log.Printf("Received: %v", in.GetName())
-	return &pb.Person{Name: "Hello " + in.GetName(), Age: in.GetAge()}, nil
+// PersonData implements person.GetPerson
+func (s *server) PersonData(ctx context.Context, in *pb.Person) (*pb.SendPersonData, error) {
+	log.Printf("Received: %v %v", in.GetName(), in.GetAge())
+	return &pb.SendPersonData{Message: "Person Name " + in.GetName() + "Person Age " + string(in.GetAge())}, nil
 }
 
 func main() {

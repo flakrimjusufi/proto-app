@@ -37,7 +37,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("could not get person data: %v", err)
 	}
-	log.Printf("Person name: %s", r.GetName())
-	log.Printf("Person age: %d", r.GetAge())
+	log.Printf("Message: %s", r.GetMessage())
 
 }

@@ -18,5 +18,6 @@ message Person {
 
 // The response message containing person's data
 message SendPersonData {
-  string message = 1;
+  string name = 1;
+  int32 age = 2;
 }
