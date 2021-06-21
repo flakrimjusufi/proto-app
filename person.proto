@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package main;
+
+option go_package = "/person";
+
+message Person {
+  string name = 1;
+  int32 age = 2;
+}
+
+// The getPerson service definition.
+service GetPerson {
+  // get data
+  rpc PersonData (Person) returns (Person){}
+}
