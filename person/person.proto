@@ -7,17 +7,11 @@ option go_package = "/person";
 // The getPerson service definition.
 service GetPerson {
   // get data
-  rpc PersonData (Person) returns (SendPersonData){}
+  rpc PersonData (Person) returns (Person){}
 }
 
 // The request message containing the user's name and age
 message Person {
-  string name = 1;
-  int32 age = 2;
-}
-
-// The response message containing person's data
-message SendPersonData {
   string name = 1;
   int32 age = 2;
 }
