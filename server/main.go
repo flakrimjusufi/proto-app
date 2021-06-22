@@ -18,9 +18,9 @@ type server struct {
 }
 
 // PersonData implements person.GetPerson
-func (s *server) PersonData(ctx context.Context, in *pb.Person) (*pb.SendPersonData, error) {
+func (s *server) PersonData(ctx context.Context, in *pb.Person) (*pb.Person, error) {
 	log.Printf("Received: %v %v", in.GetName(), in.GetAge())
-	return &pb.SendPersonData{Name: in.GetName(), Age: in.GetAge()}, nil
+	return &pb.Person{Name: in.GetName(), Age: in.GetAge()}, nil
 }
 
 func main() {
