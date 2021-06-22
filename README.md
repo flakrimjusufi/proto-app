@@ -2,7 +2,7 @@
 
 This is just a simple gRPC app build with Go and ProtoBuff.
 
-It takes two input arguments (Name and Age) on client side and prints them out on server side.
+It takes two input arguments (_Name_ and _Age_) on client side and prints them out on server side.
 
 To try it, please make sure you have Go installed:
 
@@ -13,13 +13,13 @@ For installation instructions, see Go's getting started guide: https://golang.or
 
 ## How to Run it?
 
-1. Clone the repo in your local environment:
+**1. Clone the repo in your local environment:**
 
 ~~~~
 git clone https://github.com/flakrimjusufi/proto-app.git
 ~~~~
 
-2. Change directory to the project root and install dependencies with go mod commands:
+****2. Change directory to the project root and install dependencies with go mod commands:****
 
 `go mod init server/main.go`
 
@@ -29,7 +29,7 @@ git clone https://github.com/flakrimjusufi/proto-app.git
 You should see all dependencies installed in a go.mod and go.sum file 
 ~~~~
 
-3. Run the server first:
+**3. Run the server first:**
 
 `go run server/main.go`
 
@@ -37,7 +37,7 @@ You should see all dependencies installed in a go.mod and go.sum file
 You should get a response from the server: server listening at [::]:50051** once the server is up and running.
 ~~~~
 
-4. Run the client afterwards:
+**4. Run the client afterwards in a new terminal:**
 
 `go run client/main.go your_name your_age`
 
