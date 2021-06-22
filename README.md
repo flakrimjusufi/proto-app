@@ -17,20 +17,27 @@ For installation instructions, see Go's getting started guide: https://golang.or
 git clone https://github.com/flakrimjusufi/proto-app.git
 ~~~~
 
-2. Change Directory to the server directory and run the server:
-
+2. Change directory to the project root and install dependencies with go mod commands:
 ~~~~
-cd to _YOUR_LOCAL_PATH_/server and run **go run main.go**
+- go mod init server/main.go 
+- go mod tidy 
+
+**You should see all dependencies installed in a go.mod and go.sum file 
+~~~~
+
+3. Run the server first:
+~~~~
+go run server/main.go
 
 **You should get a response from the server: server listening at [::]:50051** once the server is up and running.
 ~~~~
 
-3. Change Directory to the client directory and run the client:
+4. Run the client afterwards:
 
 ~~~~
-cd to _YOUR_LOCAL_PATH_/client and run **go run main.go _your_name_ your_age**
+go run client/main.go _your_name_ your_age
 
-You should have a response from client side, for example: **Sent Person data to the server: Name Flakrim, Age 27**
+**You should have a response from client side, for example: **Sent Person data to the server: Name Flakrim, Age 27**
 
-And then on server side: **Received: Flakrim 27** 
+**And then on server side: **Received: Flakrim 27** 
 ~~~~
